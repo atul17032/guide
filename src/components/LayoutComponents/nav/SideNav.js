@@ -21,14 +21,16 @@ class SideNav extends Component {
   constructor(...props) {
     super(...props);
 
-    this.renderChildren = this.renderChildren.bind(this);
     this.renderPanels = this.renderPanels.bind(this);
+    this.renderChildren = this.renderChildren.bind(this);
     this.renderParent = this.renderParent.bind(this);
+    
+    
   }
 
   renderPanels(parents, pages) {
     if (!parents) {
-      return 'No Parents Here';
+      return 'No Parents code here';
     }
     return parents.map(parent => this.renderParent(parent, pages));
   }
@@ -98,7 +100,7 @@ class SideNav extends Component {
   }
 }
 
-SideNav.displayName = 'SideNav';
+SideNav.displayName = 'SidepanelNav';
 SideNav.propTypes = propTypes;
 
 export default SideNav;
