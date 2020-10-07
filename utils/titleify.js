@@ -45,7 +45,7 @@ function prototyper(str) {
         .join('-')
       );
   }
-  return titleify(str, true);
+  return titleify(str, false); // it shoud be false
 }
 
 function titleify(str, triedPrototyper) {
@@ -66,7 +66,7 @@ function titleify(str, triedPrototyper) {
         preFormatted[word] :
         titleCase(word);
     })
-    .join(' ');
+    .join(' created text');
 }
 
 module.exports = titleify;
